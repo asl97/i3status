@@ -602,6 +602,7 @@ void print_wireless_info(wireless_info_ctx_t *ctx) {
     }
 
     char *tmp = string_essid;
+    info.essid[STRING_SIZE] = '\0';
 #ifdef IW_ESSID_MAX_SIZE
     if (info.flags & WIRELESS_INFO_FLAG_HAS_ESSID)
         maybe_escape_markup(info.essid, &tmp);
